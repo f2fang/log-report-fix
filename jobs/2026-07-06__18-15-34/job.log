@@ -1,0 +1,31 @@
+Trial log-report__oYFebh4 failed: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__oyfebh4__env --project-directory /Users/fangfang/Downloads/log-report/environment -f /private/var/folders/2g/w_zy20yx4cl3tprrkcwyb9_c0000gn/T/tmps0r09psx/log-report__oYFebh4__env-docker-compose-resources.json -f /Users/fangfang/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /private/var/folders/2g/w_zy20yx4cl3tprrkcwyb9_c0000gn/T/tmppi_maxgh/docker-compose-mounts.json build. Return code: 1. Stdout:  Image log-report__oyfebh4__env-main Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 574B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 191B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11.13-slim-bookworm@sha256:2ba2e944f9dc568f2b8fc99d2c8cb17e74e0f5b33f7b837a0aed9f02b73f4f7b
+#3 ERROR: docker.io/library/python:3.11.13-slim-bookworm@sha256:2ba2e944f9dc568f2b8fc99d2c8cb17e74e0f5b33f7b837a0aed9f02b73f4f7b: not found
+------
+ > [internal] load metadata for docker.io/library/python:3.11.13-slim-bookworm@sha256:2ba2e944f9dc568f2b8fc99d2c8cb17e74e0f5b33f7b837a0aed9f02b73f4f7b:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM python:3.11.13-slim-bookworm@sha256:2ba2e944f9dc568f2b8fc99d2c8cb17e74e0f5b33f7b837a0aed9f02b73f4f7b
+
+   2 |     
+
+   3 |     WORKDIR /app
+
+--------------------
+
+failed to solve: python:3.11.13-slim-bookworm@sha256:2ba2e944f9dc568f2b8fc99d2c8cb17e74e0f5b33f7b837a0aed9f02b73f4f7b: failed to resolve source metadata for docker.io/library/python:3.11.13-slim-bookworm@sha256:2ba2e944f9dc568f2b8fc99d2c8cb17e74e0f5b33f7b837a0aed9f02b73f4f7b: docker.io/library/python:3.11.13-slim-bookworm@sha256:2ba2e944f9dc568f2b8fc99d2c8cb17e74e0f5b33f7b837a0aed9f02b73f4f7b: not found
+
+. Stderr: None. 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached

@@ -1,0 +1,5 @@
+Skipping image OS validation for hb__a7767d177f9bc3cae1cdd2d6de388e27: docker inspect returned 1
+Collecting main service artifacts
+Trial log-report__RYD3SnX failed: No reward file found at jobs/2026-07-06__18-13-35/log-report__RYD3SnX/verifier/reward.txt or jobs/2026-07-06__18-13-35/log-report__RYD3SnX/verifier/reward.json
+Exception RewardFileNotFoundError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached

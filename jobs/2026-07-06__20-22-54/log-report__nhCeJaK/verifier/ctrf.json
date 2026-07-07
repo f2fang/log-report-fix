@@ -1,0 +1,41 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1783394583.5083375,
+            "stop": 1783394583.5189579
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_success_criterion_1_report_file_exists",
+                "status": "passed",
+                "duration": 0.000346373999999372,
+                "start": 1783394583.5123131,
+                "stop": 1783394583.5128026,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_success_criterion_2_report_is_exact_json_summary",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0004373320000006231,
+                "start": 1783394583.5128925,
+                "stop": 1783394583.518804,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_success_criterion_2_report_is_exact_json_summary():\n        \"\"\"Verifies success criterion 2: report.json contains exactly total_requests=6, unique_ips=3, and top_path=/index.html.\"\"\"\n        data = json.loads(REPORT.read_text())\n>       assert data == {\n            \"total_requests\": 6,\n            \"unique_ips\": 3,\n            \"top_path\": \"/index.html\",\n        }\nE       AssertionError: assert {'top_path': ...nique_ips': 3} == {'top_path': ...nique_ips': 3}\nE         \nE         Omitting 2 identical items, use -vv to show\nE         Differing items:\nE         {'total_requests': 999} != {'total_requests': 6}\nE         Use -v to get more diff\n\n/tests/test_outputs.py:16: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

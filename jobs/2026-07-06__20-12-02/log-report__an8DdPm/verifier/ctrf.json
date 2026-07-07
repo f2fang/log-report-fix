@@ -1,0 +1,44 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1783393926.1292531,
+            "stop": 1783393926.1509833
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_success_criterion_1_report_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00045466699998542026,
+                "start": 1783393926.1331265,
+                "stop": 1783393926.138845,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_success_criterion_1_report_file_exists():\n        \"\"\"Verifies success criterion 1: create /app/report.json as the required output artifact.\"\"\"\n>       assert REPORT.exists(), \"missing /app/report.json\"\nE       AssertionError: missing /app/report.json\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:10: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_success_criterion_2_report_is_exact_json_summary",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00035566700000799756,
+                "start": 1783393926.1389608,
+                "stop": 1783393926.1508234,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_success_criterion_2_report_is_exact_json_summary():\n        \"\"\"Verifies success criterion 2: report.json contains exactly total_requests=6, unique_ips=3, and top_path=/index.html.\"\"\"\n>       data = json.loads(REPORT.read_text())\n                          ^^^^^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:15: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/usr/local/lib/python3.11/pathlib.py:1058: in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/app/report.json'), mode = 'r', buffering = -1\nencoding = 'locale', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'\n\n/usr/local/lib/python3.11/pathlib.py:1044: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}
